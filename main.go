@@ -20,11 +20,6 @@ func main() {
 	binDir := filepath.Join(goPath, "bin")
 	autoGoPath := filepath.Join(binDir, "AutoGo.exe")
 
-	if err := os.MkdirAll(binDir, 0755); err != nil {
-		fmt.Println("Failed to create bin directory:", err)
-		return
-	}
-
 	if err := os.WriteFile(autoGoPath, autoGoExe, 0755); err != nil {
 		fmt.Println("Failed to write AutoGo.exe:", err)
 		return
